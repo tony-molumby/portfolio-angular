@@ -58,6 +58,9 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-## This is a quick hack job
+## This is a quick write / build because my last portfolio was written in React v16...
 
-I could have added linting, prettier, stylelint and the works to this.  I am getting this out the door so I can apply to this position.  Major props to Jimmy Bendeck for helping creating this oppotunity.  I am truely greatful.
+I could have added linting, prettier, stylelint and the works to this.  I am getting this out the door so I can apply to this position and my React 16 code, which this portfolio was originally written in, is ancient by now.  Major props to Jimmy Bendeck for helping create this opportunity.  I am truely gretful. Love you Brother.
+
+## AI Images?
+  Nope, the core of this was written before AI was even a thing.  So I am still using the images I contracted someone to create for me.
