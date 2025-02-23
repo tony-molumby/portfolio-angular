@@ -1,14 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-body{ 
-    font-family: 'Roboto', sans-serif;
+/* adding mixins / making smaller, more modular stylesheets is preferred */
+
+@use '@angular/material' as mat;
+@use 'fonts' as fonts;
+@use 'theme-colors';
+@include mat.core;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: theme-colors.$primary-palette,
+        tertiary: theme-colors.$tertiary-palette,
+        ),
+        typography: Roboto,
+        density: 0,
+      )
+    );
+      
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
 }

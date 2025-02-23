@@ -20,8 +20,10 @@
     "baseUrl": "src",
     "paths": {
       "@app/*": ["app/*"],
-      "@assets/*": ["app/assets/*"],
-      "@views*": ["app/view/*"],
+      "@views/*": ["app/views/*"],
+      "@commponents/*": ["app/shared/components/*"],
+      "@styles/*": ["styles/*"],
+      "@mixins/*": ["styles/mixins/*"],
     }
   },
   "angularCompilerOptions": {
