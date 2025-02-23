@@ -1,27 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
-/* adding mixins / making smaller, more modular stylesheets is preferred */
-
+/* adding component level stlyes / making smaller, more modular stylesheets is preferred */
+/* best tutorial for making modular stylesheets: https://angular-material.dev/articles/updating-to-angular-material-19#13-changes-for-typography */
+/* TODO: Figure out how Matieral 19 can now import mixins here from other stylesheets */
 @use '@angular/material' as mat;
-@use 'fonts' as fonts;
+@use 'fonts';
 @use 'theme-colors';
 @include mat.core;
 
-html {
+:root {
   @include mat.theme(
     (
       color: (
         theme-type: light,
         primary: theme-colors.$primary-palette,
         tertiary: theme-colors.$tertiary-palette,
-        ),
-        typography: Roboto,
-        density: 0,
-      )
-    );
-      
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
 }
-
-
 
 html,
 body {
@@ -29,11 +27,11 @@ body {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: var(--mat-sys-surface);
-    color: var(--mat-sys-on-surface);
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
 }
