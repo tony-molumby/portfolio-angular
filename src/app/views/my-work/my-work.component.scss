@@ -1,0 +1,47 @@
+.banner-image {
+  background: url(../../../assets/myWork.svg) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 1em 0em;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    box-shadow: var(--mat-sys-level1);
+    border-radius: 10px;
+    padding: 1em;
+
+    &:hover {
+      box-shadow: var(--mat-sys-level4);
+      cursor: pointer;
+
+      &.noUrl {
+        cursor: not-allowed;
+      }
+    }
+
+    .card-image {
+      height: auto;
+      max-height: 200px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+/* adding component level stlyes / making smaller, more modular stylesheets is preferred */
+/* best tutorial for making modular stylesheets: https://angular-material.dev/articles/updating-to-angular-material-19#13-changes-for-typography */
+/* TODO: Figure out how Matieral 19 can now import mixins here from other stylesheets */
+@use '@angular/material' as mat;
+@use 'fonts';
+@use 'theme-colors';
+@include mat.core;
+
+:root {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: theme-colors.$primary-palette,
+        tertiary: theme-colors.$tertiary-palette,
+      ),
+      typography: 'badaboom_bbregular',
+      density: 0,
+    )
+  );
+
+}
+
+html,
+body {
+  height: 100%;
+  font-family: comic_bookregular, sans-serif;  // needed because Material is not setting the font info for regular html elements
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #FFF;
+  color: var(--mat-sys-on-surface);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.red-text-box {
+  font-family: badaboom_bbregular, sans-serif;
+  padding: 5px 10px 5px 10px;
+  border: 3px solid var(--mat-sys-on-primary-container);
+  color: var(--mat-sys-on-primary);
+  background-color: var(--mat-sys-error);
+  text-align: center;
+  text-shadow: 1px 1px #000000;
+
+  z-index: 1;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .content-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text-container {
+      padding: 0 2em 2em 2em;
+      max-width: 1200px;
+    }
+  }
+}
+
+a {
+  color: var(--mat-sys-primary);
+  text-decoration: none;
+}
+
+.text-html { 
+  font-size: 20px;   // needed because Material is not setting the font info for regular html elements
+}

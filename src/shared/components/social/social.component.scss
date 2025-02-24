@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+
+  .social-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FA7D16;
+
+    &:hover {
+      color: #5d300a;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="social-container">
+  @for (item of socialItems; track item.text) {
+    <div class="social-item">
+      <a href="{{ item.url }}" target="_blank" class="social-link">
+        <fa-icon [icon]="item.icon" size="3x"></fa-icon>
+        <h4>{{ item.text }}</h4>
+      </a>
+    </div>
+  }
+</div>
