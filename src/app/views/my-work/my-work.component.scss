@@ -32,10 +32,15 @@
     &:hover {
       box-shadow: var(--mat-sys-level4);
       cursor: pointer;
+
+      &.noUrl {
+        cursor: not-allowed;
+      }
     }
 
     .card-image {
       height: auto;
+      max-height: 200px;
       width: 100%;
     }
   }

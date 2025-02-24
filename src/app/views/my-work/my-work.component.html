@@ -1,25 +1,55 @@
 <div class="page-container">
   <div class="content-container">
     <div class="banner-image">
-      <h2 class="red-text-box subheading">
-        My ability to control the machines was born...
-      </h2>
+      <h2 class="red-text-box subheading">With My Newfound Powers...</h2>
     </div>
-    <h2 class="red-text-box">Samples of my work</h2>
-    <div class="card-container">
-      @for (workItem of myWorkItems; track workItem.title) {
-        <div class="card">
-          <h2 class="title">{{ workItem.title }}</h2>
-          <a href="{{ workItem.url }}" target="_blank">
+    <div class="text-container">
+      <div class="mywork-description text-html">
+        <p>
+          I have worked with large and small organizations in a variety of roles
+          and believe in the idea of a
+          <strong>
+            <a
+              href="https://medium.com/@anthonyambriz/jack-of-all-trades-master-of-many-22a6dbd6a86a"
+              target="_blank"
+            >
+              Jack of All Trades, Master of Many.
+            </a>
+          </strong>
+        </p>
+        <p>The TLDR version:</p>
+        <p>
+          <i>
+            Jack of all trades, master of none, is an antiquated and unfair
+            pairing. In fact, there’s an increasing need in our entrepreneurial
+            culture for Renaissance thinkers and doers. Due to the rise of the
+            digital world, it is more necessary and feasible than ever for a
+            modern entrepreneur to be a jack of all trades, master of many.
+          </i>
+          <br />
+          <br />
+          <span>- Tyler Ward</span>
+        </p>
+      </div>
+      <h2 class="red-text-box">Samples of my work</h2>
+      <div class="card-container">
+        @for (workItem of myWorkItems; track workItem.title) {
+          <div
+            class="card"
+            (click)="openUrl(workItem.url)"
+            [ngClass]="{ noUrl: !workItem.url }"
+          >
+            <h2 class="card-title">{{ workItem.title }}</h2>
             <img
               class="card-image"
               src="{{ workItem.img }}"
               alt="{{ workItem.title }}"
             />
-          </a>
-          <p>{{ workItem.description }}</p>
-        </div>
-      }
+            <p class="card-description">{{ workItem.description }}</p>
+          </div>
+        }
+      </div>
     </div>
   </div>
 </div>
+<app-footer></app-footer>

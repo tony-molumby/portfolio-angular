@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { SocialComponent } from 'shared/components/social/social.component';
 
@@ -8,6 +8,4 @@ import { SocialComponent } from 'shared/components/social/social.component';
   styleUrl: './home.component.scss',
   imports: [MatIconModule, SocialComponent],
 })
-export class HomeComponent {
-  class = input();
-}
+export class HomeComponent {}

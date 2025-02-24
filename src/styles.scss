@@ -15,15 +15,17 @@
         primary: theme-colors.$primary-palette,
         tertiary: theme-colors.$tertiary-palette,
       ),
-      typography: badaboom_bbregular,
+      typography: 'badaboom_bbregular',
       density: 0,
     )
   );
+
 }
 
 html,
 body {
   height: 100%;
+  font-family: comic_bookregular, sans-serif;  // needed because Material is not setting the font info for regular html elements
 }
 
 body {
@@ -41,6 +43,7 @@ h1, h2, h3 {
 }
 
 .red-text-box {
+  font-family: badaboom_bbregular, sans-serif;
   padding: 5px 10px 5px 10px;
   border: 3px solid var(--mat-sys-on-primary-container);
   color: var(--mat-sys-on-primary);
@@ -61,5 +64,23 @@ h1, h2, h3 {
   .content-container {
     width: 100%;
     max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text-container {
+      padding: 0 2em 2em 2em;
+      max-width: 1200px;
+    }
   }
+}
+
+a {
+  color: var(--mat-sys-primary);
+  text-decoration: none;
+}
+
+.text-html { 
+  font-size: 20px;   // needed because Material is not setting the font info for regular html elements
 }
