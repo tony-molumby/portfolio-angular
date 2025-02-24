@@ -1,0 +1,24 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .headshot {
+    background: url(../../../assets/headshot.svg) no-repeat; 
+    background-size: contain;
+    background-position: center;
+    height: 800px;
+    min-height: 400px;
+    width: 100%;
+    margin-top: -50px;
+
+    @media (max-width: 768px) {
+      height: 400px;
+    }
+  }
+
+  .intro-text {
+    position: relative;
+    top: -10vh;
+  }
+}

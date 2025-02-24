@@ -4,27 +4,27 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
-      import('./views/home/home.component').then(m => m.HomeComponent),
+      import('./views/home/home.component').then(c => c.HomeComponent),
     pathMatch: 'full',
   },
   {
     path: 'about',
     loadComponent: () =>
-      import('./views/about/about.component').then(m => m.AboutComponent),
+      import('./views/about/about.component').then(c => c.AboutComponent),
   },
   {
     path: 'contact',
     loadComponent: () =>
-      import('./views/contact/contact.component').then(m => m.ContactComponent),
+      import('./views/contact/contact.component').then(c => c.ContactComponent),
   },
   {
     path: 'my-work',
     loadComponent: () =>
-      import('./views/my-work/my-work.component').then(m => m.MyWorkComponent),
+      import('./views/my-work/my-work.component').then(c => c.MyWorkComponent),
   },
   {
     // Invalid route - redirect to default home
-    path: '',
+    path: '**',
     redirectTo: 'home',
     pathMatch: 'full',
   },

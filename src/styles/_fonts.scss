@@ -1,6 +1,42 @@
-// Fonts
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-@import 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+@font-face {
+  font-family: 'badaboom_bbregular';
+  src: url('./fonts/badaboom-bb.regular-webfont.woff2') format('woff2'),    
+  url('./fonts/badaboom-bb.regular-webfont.woff') format('woff');   
+  font-weight: normal;
+  font-style: normal; 
+}
 
-$heading-font: 'Fira Sans', sans-serif;
-$body-font: 'Fira Sans', sans-serif;
+// @font-face {
+//   font-family: 'comic_bookbold_italic';
+//   src: url('comic_book_bold_italic-webfont.woff2') format('woff2'),
+//        url('fonts/comic_book_bold_italic-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+
+// }
+
+// @font-face {
+//   font-family: 'comic_bookbold';
+//   src: url('comic_book_bold-webfont.woff2') format('woff2'),
+//        url('comic_book_bold-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+
+// }
+
+// @font-face {
+//   font-family: 'comic_bookitalic';
+//   src: url('comic_book_italic-webfont.woff2') format('woff2'),
+//        url('comic_book_italic-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+
+// }
+
+// @font-face {
+//   font-family: 'comic_bookregular';
+//   src: url('comic_book-webfont.woff2') format('woff2'),
+//        url('comic_book-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }

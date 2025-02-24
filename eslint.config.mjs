@@ -1,6 +1,6 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint, { config } from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 import esLintConfigPrettier from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.Config[]} */

@@ -1,1 +1,25 @@
-<p>my-work works!</p>
+<div class="page-container">
+  <div class="content-container">
+    <div class="banner-image">
+      <h2 class="red-text-box subheading">
+        My ability to control the machines was born...
+      </h2>
+    </div>
+    <h2 class="red-text-box">Samples of my work</h2>
+    <div class="card-container">
+      @for (workItem of myWorkItems; track workItem.title) {
+        <div class="card">
+          <h2 class="title">{{ workItem.title }}</h2>
+          <a href="{{ workItem.url }}" target="_blank">
+            <img
+              class="card-image"
+              src="{{ workItem.img }}"
+              alt="{{ workItem.title }}"
+            />
+          </a>
+          <p>{{ workItem.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>
